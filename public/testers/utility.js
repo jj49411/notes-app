@@ -5,6 +5,13 @@ var assert = {
     }else{
       console.log(":(");
     }
+  },
+  isTruthy: function(assertionToCheck) {
+    if(!assertionToCheck) {
+      console.log(":(") 
+    }else {
+      console.log(":)")
+    }
   }
 }
 
