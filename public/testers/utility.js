@@ -7,3 +7,8 @@ var assert = {
     }
   }
 }
+
+var describe = (description, assertion) => {
+  console.log(description);
+  assertion();
+}
