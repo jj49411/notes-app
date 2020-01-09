@@ -1,12 +1,4 @@
-// var assert = {
-//   isTrue: function(expect, actual) {
-//     if(expect === actual) {
-//       console.log(":)");
-//     }else{
-//       console.log(":(");
-//     }
-//   }
-// }
+'use strict';
 
 class NoteList {
   constructor (notes = []) {

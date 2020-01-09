@@ -1,4 +1,4 @@
-
+'use strict';
 
 class NoteListView {
   constructor (noteList = new NoteList()) {
@@ -6,7 +6,7 @@ class NoteListView {
   }
   render(){
     return "<ul>" + this.noteList.showNotes().map(note => {
-      return "<li><div>" + note + "</div></li>"
+      return "<li><div>" + note.slice(0, 20) + "</div></li>"
     }).join("") + "</ul>"
   }
 }

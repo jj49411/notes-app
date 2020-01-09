@@ -1,3 +1,4 @@
+'use strict';
 
 class NoteController {
   constructor(noteListModel = new NoteList()) {
@@ -7,7 +8,7 @@ class NoteController {
     this.noteListModel.add("Favourite drink: seltzer")
     var noteListView = new NoteListView(this.noteListModel)
     var html = noteListView.render();
-    document.getElementById("app").innerText = html;
+    document.getElementById("app").innerHTML = html;
   }
 
 }
