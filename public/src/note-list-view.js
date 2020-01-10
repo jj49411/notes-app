@@ -4,9 +4,12 @@ class NoteListView {
   constructor (noteList = new NoteList()) {
     this.noteList = noteList;
   }
-  render(){
+  getHTML(){
     return "<ul>" + this.noteList.showNotes().map(note => {
-      return "<li><div>" + note.slice(0, 20) + "</div></li>"
+      var noteText = note.read();
+      var noteId = note.id;
+      if(noteText.length > 20) noteText = noteText.slice(0, 20) + "..."
+      return `<li><div id="note_${noteId}"><a href = '#notes/${noteId}'>${noteText}</a></div></li>`
     }).join("") + "</ul>"
   }
 }

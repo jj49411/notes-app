@@ -10,7 +10,7 @@ class NoteList {
     });
   }
   showNotes(){
-  return this.notes.map(note => note.read());
+  return this.notes
   }
 }
 
